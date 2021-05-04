@@ -1,0 +1,28 @@
+@model Star
+
+<div class="container" style="background-color: white;">
+    <h4>Edit Post</h4>
+    <form asp-controller="Star" asp-action="Update" class="shadow p-3 mb-5 rounded" method="POST">
+        <div class="form-group">
+            <label asp-for="StarName"></label>
+            <span asp-validation-for="StarName" class="text-danger font-weight-bold"></span>
+            <input asp-for="StarName" class="form-control">
+        </div>
+        <div class="form-group">
+            <label asp-for="Description"></label>
+            <span asp-validation-for="Description" class="text-danger font-weight-bold"></span>
+            <input asp-for="Description" class="form-control">
+        </div>
+        <div class="form-group">
+            <label asp-for="Time"></label>
+            <span asp-validation-for="Time" class="text-danger font-weight-bold"></span>
+            <input asp-for="Time" class="form-control">
+        </div>
+        <div class="form-group">
+            <label asp-for="Location"></label>
+            <span asp-validation-for="Location" class="text-danger font-weight-bold"></span>
+            <input asp-for="Location" class="form-control">
+        </div>
+        <button class="btn btn-outline-success">Update</button>
+    </form>
+</div>

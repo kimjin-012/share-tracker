@@ -1,0 +1,44 @@
+@model Star
+
+<div class="container" style="background-color: white;">
+    <div class="row">
+        <div class="col">
+            <h2>More of @Model.StarName</h2>
+            <h3>Description:</h3>
+            <p>@Model.Description</p>
+            <h3>Location: @Model.Location</h3>
+            @if(Context.Session.GetInt32("UserId") == Model.UserId)
+            {
+                <a class="btn btn-dark btn-outline-secondary" asp-controller="Star" asp-route-starId="@Model.StarId" asp-action="Edit">Edit</a>
+                <form asp-controller="Home" asp-action="DeletePlan" asp-route-planId="@Model.StarId" method="POST">
+                    <button class="btn btn-outline-danger">Delete</button>
+                </form>
+            }
+        </div>
+    </div>
+    <div>
+        @{
+            Comment newComment = new Comment();
+        }
+        <partial name="_Comment" model="@newComment"/>
+    </div>
+    <div>
+        <h2>Comment</h2>
+        <div class="list-group">
+            @foreach (Comment item in Model.Comments)
+            {
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">@item.User.UserName</h5>
+                        <small>@item.CreatedAt</small>
+                    </div>
+                        <p class="mb-1">@item.Note</p>
+                        <br>
+                        <form asp-controller="Monster" asp-action="DeleteComment" asp-route-commentId="@item.CommentId" asp-route-monsterId="@Model.StarId" method="POST">
+                            <button class="btn btn-danger ml-5">Delete</button>
+                        </form>
+                </div>
+            }
+        </div>
+    </div>
+</div>

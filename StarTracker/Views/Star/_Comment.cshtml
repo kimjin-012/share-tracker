@@ -1,0 +1,13 @@
+@model Comment
+
+<div>
+    <h4>New Comment</h4>
+    <form asp-controller="Star" asp-action="AddComment" class="shadow p-3 mb-5 rounded" method="POST">
+        <div class="form-group">
+            <label asp-for="Note"></label>
+            <span asp-validation-for="Note" class="text-danger font-weight-bold"></span>
+            <textarea asp-for="Note" id="Note" class="form-control" cols="30" rows="10"></textarea>
+        </div>
+        <button class="btn btn-outline-success">Create</button>
+    </form>
+</div>

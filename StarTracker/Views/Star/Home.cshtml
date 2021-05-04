@@ -1,0 +1,33 @@
+@model List<Star>
+
+<div class="container" style="background-color: white;">
+    <h1>Welcome, @Context.Session.GetString("FullName")</h1>
+    <a asp-controller="Star" asp-action="New">Create New</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Date and Time</th>
+                <th scope="col">Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(Star item in Model)
+            {
+                <tr>
+                    <td><a asp-controller="Star" asp-action="Details" asp-route-starId="@item.StarId" class="btn btn-light">@item.StarName</a></td>
+                    <td>@item.Time.ToString("M/dd") @@ @item.Time.ToString("hh:mm tt")</td>
+                    <td>@item.Location</td>
+                    <td>
+                        @if(item.UserId == Context.Session.GetInt32("UserId"))
+                        {
+                            <form asp-controller="Home" asp-action="DeletePlan" asp-route-planId="@item.StarId" method="POST">
+                                <button class="btn btn-outline-danger">Delete</button>
+                            </form>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
