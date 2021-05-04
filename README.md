@@ -1,7 +1,7 @@
-<p align="center">
-  <h3 align="center">Star Tracker</h3>
-  <p align="center">Basic ASP.NET core project</p>
-</p>
+# Star Tracker
+### User sharing star event Web
+Creating a web platform where User share Stars Event.
+ASP.NET core project
 
 ## About The Project
 
