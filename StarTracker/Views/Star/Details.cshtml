@@ -34,7 +34,7 @@
                     </div>
                         <p class="mb-1">@item.Note</p>
                         <br>
-                        <form asp-controller="Monster" asp-action="DeleteComment" asp-route-commentId="@item.CommentId" asp-route-monsterId="@Model.StarId" method="POST">
+                        <form asp-controller="Star" asp-action="DeleteComment" asp-route-commentId="@item.CommentId" asp-route-monsterId="@Model.StarId" method="POST">
                             <button class="btn btn-danger ml-5">Delete</button>
                         </form>
                 </div>
