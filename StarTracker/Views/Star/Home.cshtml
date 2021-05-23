@@ -21,7 +21,7 @@
                     <td>
                         @if(item.UserId == Context.Session.GetInt32("UserId"))
                         {
-                            <form asp-controller="Home" asp-action="DeletePlan" asp-route-planId="@item.StarId" method="POST">
+                            <form asp-controller="Star" asp-action="Delete" asp-route-starId="@item.StarId" method="POST">
                                 <button class="btn btn-outline-danger">Delete</button>
                             </form>
                         }
