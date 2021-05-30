@@ -6,6 +6,10 @@ Creating a web platform where User share Stars Event.
 ##### ASP.NET core project
 
 ## About The Project
+Welcome to the simple Star Event sharing web, created using .NET Core!
+<br>
+<img src="./image/giphy.gif" alt="main page"/>
+<br>
 This website is built with the ASP.NET core basics, design front-end and back-end with C#. User can register/log in and allow to explore the website freely.
 All users can register an event when they witness a star event. Other users can see the shared event to gather information, and anyone could comment on the post to communicate.
 
