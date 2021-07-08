@@ -55,10 +55,10 @@ namespace StarTracker.Models
         "Object reference not set to an instance of an object"
         will be the error if accessed but not included. 
         **********************************************************************/  
-        // 1 User : Many Monsters
+        // 1 User : Many Stars
         public List<Star> Stars { get; set; } 
 
-        //1 User : Many Posts
+        //1 User : Many Comments
         public List<Comment> Comments {get; set; }
     }
 }

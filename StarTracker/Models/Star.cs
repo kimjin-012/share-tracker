@@ -8,7 +8,6 @@ namespace StarTracker.Models
     public class Star
     {
         [Key]
-
         public int StarId { get; set; }
 
         [Required(ErrorMessage="is required")]
