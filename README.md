@@ -36,10 +36,10 @@ Detail page that shows more detail of the post and this is where users can comme
 - C#
 - ASP.NET Core
 - Entity Framework
-- SQL
+- MySQL
 
 ## Getting Started
-Begin the project by creating a base prject with .NET (replace 'ProjName' with anything)
+Begin the project by creating a base project with .NET (replace 'ProjName' with anything)
 ```
 dotnet new mvc --no-https -o ProjName
 ```
